@@ -1,0 +1,59 @@
+package com.cursovideo.trabalhodasemana;
+
+import java.util.Scanner;
+
+public class TrabalhoDaSemana {
+private static String usuario;
+private static String senha;    
+private static String nome;
+private static float cpf;
+private static int cep;
+private static String num;
+    
+    
+  
+    public static void main(String[] args) {
+  Scanner leitura = new Scanner (System.in);
+  
+//Login e Senha  
+do{
+System.out.println("login do Usuario: ");
+     usuario = leitura.nextLine();  
+}while(usuario.length() <= 0);
+    
+do{
+    System.out.println("Senha: ");
+     senha = leitura.nextLine();
+}while(senha.length() <= 7 || senha.length() >= 17);
+ 
+//Cadastro
+do{
+System.out.println("Nome completo: ");
+ nome = leitura.nextLine();
+ }while(nome.length() <= 0);
+
+ do{
+ System.out.println("Digite seu CPF: ");
+ cpf = leitura.nextFloat();
+ }while(cpf == 11);
+ 
+//Endereço 
+do{ 
+System.out.println("Digite seu CEP: ");
+ cep = leitura.nextInt();
+}while(cep == 8);
+
+do{
+System.out.println("Digite o número da casa e seu complemento: ");
+ num = leitura.nextLine();
+}while(num.length() <= 0);
+
+    System.out.println("\nLogin: " + usuario);
+    System.out.println("Senha: " + senha);
+    System.out.println("Nome: " + nome);
+    System.out.println("CPF: " + cpf);
+    System.out.println("CEP: " + cep);
+    System.out.println("Numero e complemento: " + num);
+    }
+    
+}
